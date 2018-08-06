@@ -1,0 +1,35 @@
+event.currentTarget
+
+手动触发js事件
+（http://blog.sina.com.cn/s/blog_70a3539f01015yn0.html）
+let ev = document.createEvent('HTMLEvents');
+ev.initEvent('change', false, true);
+this.$refs['weight' + num][0].dispatchEvent(ev);
+
+
+vue $on $emit
+
+substr 反向截取
+sublice 第一个参数为负数，则反向计数
+
+
+递归调用 函数返回值
+
+map: map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。
+     map() 不会改变原始数组。
+
+forEach:  forEach()方法返回undefined
+	  forEach()不会改变原始数组。(待定)
+
+offsetHeight/offsetWidth  元素本身的宽高  obj.offsetHeight
+offsetLeft/offsetRight/offsetTop/offsetBottom   元素距离浏览器工作区边缘的距离   obj.offsetLeft
+
+translate/transform 与 position fixed 会冲突（chrome）
+
+获取图片原始尺寸可以使用HTML5 新属性 naturalWidth/naturalHeight；如要兼容的话，直接使用 .width,.height 就可以了。
+
+css3 : pointer-events: none; // 点击穿透
+
+// promise
+
+// 服务器端渲染

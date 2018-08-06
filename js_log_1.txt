@@ -1,0 +1,7 @@
+node中的绝对路径，相对路径
+	1. 相对路径
+	../test/app.js   ./test/app.js
+	2. 绝对路径
+	/test/app.js 
+
+require("./test/app.js")  require()引相对路径
