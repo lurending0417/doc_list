@@ -5,3 +5,24 @@ node中的绝对路径，相对路径
 	/test/app.js 
 
 require("./test/app.js")  require()引相对路径
+
+
+
+stage-2  不支持import
+es2015   支持import
+nodejs是v8引擎的封装，所以不支持import/export
+使用node搭建服务器可以使用(babel-plugin-transform-es2015-modules-commonjs)插件支持node使用import。
+之所以不使用babel的es2015,是因为es2015会将所有es6的语法全部降级，效率不及上面的插件。
+在启动的时候使用babel-node index启动
+如果使用了nodemon,可以这样：
+	"start-dev": "babel-node index",
+ 	"start": "nodemon --exec npm run start-dev"
+
+
+
+linux git clone 每次都要输入用户名和密码
+解决方法： ssh跳过RSA key fingerprint输入yes/no（https://blog.csdn.net/a921122/article/details/46965505）	
+	修改 /etc/ssh/ssh_config
+	将 # StrictHostKeyChecking ask 改为 # StrictHostKeyChecking no
+
+git 空文件夹不会提交

@@ -32,4 +32,17 @@ css3 : pointer-events: none; // 点击穿透
 
 // promise
 
+// mock
+
 // 服务器端渲染
+
+react 高阶组件
+
+js高阶函数
+js call apply bind  call与bind的区别(https://blog.csdn.net/ganyingxie123456/article/details/70855586)
+
+css text-overflow设置超出部分隐藏需要该元素为块状元素
+
+
+
+window.fetch(https://blog.csdn.net/shendeguang/article/details/72818802)
