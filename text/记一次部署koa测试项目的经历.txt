@@ -1,0 +1,17 @@
+1.在本地写好koa项目代码，本地测试ok。
+	koa项目内容：主要是router，处理各种前端发送的请求。证实了put请求可以发送图片（网上说，put请求发送图片更符合语义）；静态文件
+	遇到的问题有：router模块化，node不支持import/export，使用了babel的一个插件解决，然而后期使用pm2启动时又有问题，暂时不知道
+		       怎么解决，无奈之下使用require/module.exports，目前运行正常。
+		       ajax处理formData遇到了boundary的问题。
+		       区分开发环境与生产环境，在nodemon的配置文件中用env属性控制。那么问题来了，nodemon只是为了开发时能够同步更新
+		       代码而添加的，在生产环境应该使用pm2维护吧。暂时想到这么多。
+2.在码云上面创建git仓库，并将koa项目传上去。
+3.在云服务器中找个位置将项目clone下来，然后npm i & npm start
+	遇到的问题： 不支持babel-node，原因是没有将node的安装目录加入环境变量中，使用（echo $PATH）查看环境变量，在/root/.bashrc文件下
+		     加入 export path="$PATH:/home/zk/node/bin"（注意：=前后不能有空格）后面的地址为node的安装地址。最后保存之后退出
+		   （exit）重新进入，然后使用babel-node就可以了。
+		     linux上的node版本（6.9.5）不支持async,升级至最新版本就ok.全局安装n（node的版本控制工具）：npm i n -g，n stable或者 
+		     n 8.9.4 （升级至指定版本）网上教程实际上要先清除npm缓存，npm cache clean -f，但我使用了这个命令就卡了，可能是已经清
+		     了，也有可能是其他原因，总之我跳过了这一步。
+4.远程访问服务器，发现访问不了，最后通过各种方法（百度+工单询问腾讯云）得知，没有开放端口。在安全组里面修改了入站规则，添加了对应端口号，
+   ok.

@@ -1,0 +1,8 @@
+nginx在linux上运行
+安装目录：/usr/local/webserver/nginx/sbin/nginx
+启动命令：安装目录 -c 配置文件目录（/usr/local/webserver/nginx/sbin/nginx -c /usr/local/webserver/nginx/conf/nginx.conf）
+查看进程号： ps -ef|grep nginx
+杀死进程： kill -QUIT 2072（进程号）
+重启进程： 进入nginx安装目录sbin下， ./nginx -s reload
+验证配置文件是否正确： 进入nginx安装目录sbin下，输入命令./nginx -t
+

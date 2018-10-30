@@ -1,0 +1,19 @@
+request的contentType的类型值
+	post请求
+		application/x-www-form-urlencoded：数据被编码为名称/值对。这是标准的编码格式。
+		multipart/form-data：数据被编码为一条消息，页上的每个控件对应消息中的一个部分。
+
+form的enctype属性为编码方式：默认为（application/x-www-form-urlencoded）
+当表单中有<input type="file">时，编码方式为（multipart/form-data）
+
+
+
+response的contentType的类型值
+ContentType 属性指定服务器响应的 HTTP 内容类型。
+如果未指定 ContentType，默认为 text/html。
+response的ContentType()的作用是使客户端浏览器，区分不同种类的数据，并根据不同的MIME调用浏览器内不同的程序嵌入模块来处理相应的数据。
+1、 服务端需要返回一段普通文本给客户端，Content-Type="text/plain"(默认)
+2 、服务端需要返回一段HTML代码给客户端 ，Content-Type="text/html"
+3 、服务端需要返回一段XML代码给客户端 ，Content-Type="text/xml"
+4 、服务端需要返回一段javascript代码给客户端，text/javascript
+5 、服务端需要返回一段json串给客户端，application/Json

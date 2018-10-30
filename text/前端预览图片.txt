@@ -1,0 +1,4 @@
+拖拽上传
+
+1. let src = URl.createObjectURL(file)
+2. FileReader (好像是base64)
