@@ -26,3 +26,6 @@ linux git clone 每次都要输入用户名和密码
 	将 # StrictHostKeyChecking ask 改为 # StrictHostKeyChecking no
 
 git 空文件夹不会提交
+
+
+在使用webpack打包的时候，遇到‘Module not found: can't resolve module ……’是因为对应的模块未安装（某些情况下）

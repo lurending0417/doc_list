@@ -1,0 +1,2 @@
+wx.navigateTo 不能跳转Tabbar
+wx.switchTab 跳转tabbar
