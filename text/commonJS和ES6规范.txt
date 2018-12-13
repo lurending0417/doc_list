@@ -1,0 +1,13 @@
+///////////////////////////
+commonJs规范(node应用)
+规范大意： 每个文件就是一个模块，有自己的作用域，module变量代表当前模块。这个变量是一个对象，exports是它对外
+	暴露的接口，module.exports 相当于exports，因为在每个模块顶部都有这样一句代码
+	（var exports = module.exports;为了我们使用方便）
+	因为引用的问题，当导出一个对象的时候用exports，当导出多个对象的时候用module.exports
+1.module.exports 
+2.exports
+3.require
+
+///////////////////////////
+ES6模块规范
+1. export import

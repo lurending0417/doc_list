@@ -1,0 +1,41 @@
+装饰器（暂时不清楚是es6还是es7）
+1. 作用于类的装饰器（将这个类作为参数传递至装饰器函数的参数中）
+		（可以传参，装饰器中return一个函数来接收类，装饰器本身接收传递的参数）
+2. 作用于类方法的装饰器（装饰本质是 其描述符）
+
+在next中使用装饰器语法需要安装babel相关插件
+webpack>=4
+///////////////////////////////////////////
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ]
+  ]
+}
+////////////////////////////////////////////////
+
+webpack<4
+///////////////////////////////////////////
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties"
+    ]
+}
+////////////////////////////////////////////////
