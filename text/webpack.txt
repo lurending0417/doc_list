@@ -1,0 +1,5 @@
+date: 2019-02-21
+alias、providePlugin、external三者区别（https://www.jianshu.com/p/24b6156f40c6）
+alias: 给路径设置别名，方便引入
+providePlugin: 给插件提供别名，项目中无需引入即可使用插件
+external: 在页面中通过script引入cdn资源或者本地资源，不会打包，前两种方式都要打包

@@ -1,0 +1,3 @@
+rgba: 不支持IE6-8
+opacity: 不支持IE6-8
+transparent: 不完全支持IE6-8

@@ -1,0 +1,15 @@
+$.fn.extend(obj)和$.extend(obj)
+
+// 在jquery的原型（prototype）上扩展方法，可以通过jquery实例访问。
+$.fn.extend({
+  showMsg: function(){}
+})
+$.fn.extend(obj) = $.prototype.extend(obj) = $.fn.obj
+
+// 对象拷贝合并扩展，不同于object.design()，会忽略undefined和null
+$.extend( [deep ], target, object1 [, objectN ] )
+deep:可选，默认false，即浅拷贝，可传入true，表示深拷贝（对象的属性为对象时也会合并），不能传入false
+target:目标对象，当只想合并两个对象而不改变对象时，传入{}，当只传入了target时，会将jquery对象当成target对象，即扩展jquery对象本身，相当于添加静态方法
+object1: 需要合并的对象
+
+//------------------------//-------------------------------------//
